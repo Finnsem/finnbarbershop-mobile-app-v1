@@ -1,0 +1,31 @@
+ion-content {
+    // overwrite inline styles
+     --offset-bottom: auto !important;
+     --overflow: hidden;
+     overflow: auto;
+     &::-webkit-scrollbar {
+      display: none;
+     }
+     background:#ffffff;
+  }
+
+  ion-accordion-group{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:#5e44d3;
+  }
+  p{
+    color:#000000;
+    font-size: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  ion-toolbar{
+    background:#604fa8;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+
+  ion-label{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }

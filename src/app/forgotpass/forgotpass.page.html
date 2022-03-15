@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Reset Password </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="email" placeholder="Enter your Email"
+    [(ngModel)]="email"></ion-input>
+    <ion-button (click)="sendResetLink()"> RESET </ion-button>
+  </ion-item>
+
+</ion-content>

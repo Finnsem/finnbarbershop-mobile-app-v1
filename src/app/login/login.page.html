@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="medium" class="ion-text-center">
+   <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+<img src="assets\logo.png">
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email" required></ion-input >
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" required></ion-input >
+  </ion-item>
+
+    <p class="ion-text-center">forgot password?<a [routerLink]="['/forgotpass']">Click here to reset</a></p>
+
+  <ion-button class="ion-padding" expand="full" shape="block" color="success" (click)="login(user)">
+    LOGIN
+  </ion-button>
+
+  <ion-button class="ion-padding" expand="full" shape="block" color="light" [routerLink]="['/register']">
+    REGISTER
+  </ion-button>
+
+  <ion-button class="ion-padding" expand="block" shape="block" color="danger" [routerLink]="['/adminlogin']">
+    ADMIN LOGIN 
+  </ion-button>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="medium" class="ion-text-center">
+    <ion-back-button slot="start">back</ion-back-button>
+   <ion-title>Admin Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+<img src="assets\logo.png">
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="admin.email" required></ion-input >
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="admin.password" required></ion-input >
+  </ion-item>
+
+    <p class="ion-text-center">forgot password?<a [routerLink]="['/forgotpass']">Click here to reset</a></p>
+
+
+  <ion-button  expand="full" expand="block" color="danger" [routerLink]="['/adminhome']">
+    ADMIN LOGIN 
+  </ion-button>
+</ion-content>

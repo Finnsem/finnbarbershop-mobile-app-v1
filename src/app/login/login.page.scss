@@ -1,0 +1,14 @@
+p{
+    font-size: smaller;
+}
+ion-content {
+    // overwrite inline styles
+     --offset-bottom: auto !important;
+     --overflow: hidden;
+     overflow: auto;
+     &::-webkit-scrollbar {
+      display: none;
+     }
+     background-color: #ad9e95;
+     padding: 5%;
+  }

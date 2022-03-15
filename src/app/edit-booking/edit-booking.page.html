@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Edit Booking</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-padding">
+<ion-text color="danger">
+  <p>Update Booking</p>
+</ion-text>
+
+<ion-item>
+  <ion-label position="floating">Name</ion-label>
+  <ion-input type="text"  [(ngModel)]="post.name" required></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" >Date</ion-label><br>
+  <ion-datetime displayFormat="MM/DD/YYYY hh:mm " 
+                [(ngModel)]="post.date" 
+                (ionChange)="setDate()"   hourValues="10,11,12,13,14,15,16,17,18,19,20" required></ion-datetime>
+</ion-item>
+
+<ion-item>
+  <ion-label>Service Type</ion-label>
+  <ion-select value="General" okText="Okay" [(ngModel)]="post.service" cancelText="Dismiss">
+    <ion-select-option value="Hair Cut">Hair Cut</ion-select-option>
+    <ion-select-option value="Relaxing Treatment">Relaxing Treatment</ion-select-option>
+    <ion-select-option value="Rebonding Treatment">Rebonding Treatment</ion-select-option>
+    <ion-select-option value="Keratin Treatment">Keratin Treatment</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Hair style</ion-label>
+  <ion-select value="General" okText="Okay" [(ngModel)]="post.hairstyle" cancelText="Dismiss">
+    <ion-select-option value="Custom">Custom</ion-select-option>
+        <ion-select-option value="Mullet">Mullet</ion-select-option>
+        <ion-select-option value="Wolf-cut">Wolf-cut</ion-select-option>
+        <ion-select-option value="The Fade Haircuts">The Fade Haircuts</ion-select-option>
+        <ion-select-option value="The Fade Haircuts (tapered)">The Fade Haircuts (tapered)</ion-select-option>
+        <ion-select-option value="Fade Buzz Haircuts">Fade Buzz Haircuts</ion-select-option>
+        <ion-select-option value="French Crop Haircuts">French Crop Haircuts</ion-select-option>
+        <ion-select-option value="Slick Back Hairstyle">Slick Back Hairstyle</ion-select-option>
+        <ion-select-option value="Men's Side Parting hairstyle">Men's Side Parting hairstyle</ion-select-option>
+        <ion-select-option value="Men's Shoulder lenght hairstyle">Men's Shoulder lenght hairstyle"</ion-select-option>
+        <ion-select-option value="Men's Quiff Cut hairstyle">Men's Quiff Cut hairstyle"</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<ion-item>
+  <ion-label>Select Barber</ion-label>
+  <ion-select value="General" okText="Okay" [(ngModel)]="post.barber" cancelText="Dismiss">
+        <ion-select-option value="Barber Dan">Barber Sufian</ion-select-option>
+        <ion-select-option value="Barber Fiz">Barber Fattah</ion-select-option>
+        <ion-select-option value="Barber Amir">Barber Syafiq</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Message</ion-label>
+  <ion-input [(ngModel)]="post.message"></ion-input>
+</ion-item>
+    
+   <ion-button expand="block"  (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>
+    Update
+   </ion-button>
+
+  </div>
+
+</ion-content>
+
+
+

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>ACCEPT/REJECT</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-padding">
+<ion-text color="danger">
+  <p>Update Job</p>
+</ion-text>
+
+
+
+
+<ion-item>
+  <ion-label>Status</ion-label>
+  <ion-select value="General" okText="Okay" [(ngModel)]="post.status" cancelText="Dismiss">
+    <ion-select-option value="Accepted">Accepted</ion-select-option>
+    <ion-select-option value="Rejected">Rejected</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Barber Message</ion-label>
+  <ion-input [(ngModel)]="post.barbermessage"></ion-input>
+</ion-item>
+    
+   <ion-button expand="block"  (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>
+    Update
+   </ion-button>
+
+  </div>
+
+</ion-content>
+
+
+

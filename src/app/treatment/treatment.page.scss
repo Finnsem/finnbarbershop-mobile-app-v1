@@ -1,0 +1,27 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    background:#bea574;
+  }
+  ion-card{
+
+    background:#7a603c;
+    text-decoration-color: #ffffff;
+  }
+  ion-content {
+    // overwrite inline styles
+     --offset-bottom: auto !important;
+     --overflow: hidden;
+     overflow: auto;
+     &::-webkit-scrollbar {
+      display: none;
+     }
+     background:#a7a54e;
+  }
+
+ ion-toolbar{
+    background:#ffffff;
+ }
+ p{
+   color: #ffffff;
+ }

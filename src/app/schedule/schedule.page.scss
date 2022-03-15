@@ -1,0 +1,17 @@
+ion-content {
+    // overwrite inline styles
+     --offset-bottom: auto !important;
+     --overflow: hidden;
+     overflow: auto;
+     &::-webkit-scrollbar {
+      display: none;
+     }
+     background-color: #e6ce49;
+  }
+ion-list{
+    background-color: #ad9d40;
+
+}
+ion-item-sliding{
+    color: #6d6430;
+}
